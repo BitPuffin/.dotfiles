@@ -39,7 +39,7 @@ end
 
 -- Make sure you install compton, compile from source, available on github!
 compositor = "compton"
-compositor_args = " --config /usr/local/etc/compton.conf"
+compositor_args = ""
 
 -- Theme!
 theme = "puffeme"
