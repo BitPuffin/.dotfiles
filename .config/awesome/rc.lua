@@ -37,6 +37,9 @@ end
 
 -- {{{ Variable definitions
 
+-- Are you an a laptop?
+laptop = true
+
 -- Make sure you install compton, compile from source, available on github!
 compositor = "compton"
 compositor_args = ""
@@ -46,7 +49,7 @@ theme = "puffeme"
 beautiful.init("/usr/share/awesome/themes/"..theme.."/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "x-terminal-emulator"
+terminal = "termit" --"x-terminal-emulator"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -390,3 +393,7 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- Autostart
+os.execute("nm-applet &")
+
