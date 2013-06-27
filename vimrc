@@ -1,10 +1,18 @@
-execute pathogen#infect()
-
 set nocompatible		" Choose no compability with legacy vi
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+" Bundles
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'zah/nimrod.vim'
+
+filetype plugin indent on	" load file type plugins + indentation
 syntax enable
 set encoding=utf-8
 set showcmd			" Display incomplete command
-filetype plugin indent on	" load file type plugins + indentation
 set t_Co=256
 
 "" Whitespace
