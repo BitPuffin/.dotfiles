@@ -5,6 +5,7 @@ syntax enable
 set encoding=utf-8
 set showcmd			" Display incomplete command
 filetype plugin indent on	" load file type plugins + indentation
+set t_Co=256
 
 "" Whitespace
 set nowrap			" Don't wrap lines
@@ -13,13 +14,13 @@ set expandtab 		" use spaces, not tabs
 set backspace=indent,eol,start	" backspace through everything in insert mode
 
 "" Searching
-set hlsearch
+set nohlsearch
 set incsearch
 set ignorecase
 set smartcase
 
 "" Fonts
-set guifont=Ubuntu\ Mono\ 12
+set guifont=DejaVu\ Sans\ Mono\ 7
 
 let g:zenesque_colors=2
 colorscheme zenesque
